@@ -8,7 +8,6 @@ def run():
     
     if r.status_code == 200:
         soup = BeautifulSoup(r.text, 'html.parser')
-
         for title in soup.find_all(['h2','h3']):
             print(title.text)
         
