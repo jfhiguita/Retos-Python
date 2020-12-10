@@ -1,12 +1,35 @@
 
 def _palindrome(text):
+
     text = text.lower()
     text = text.replace(' ', '')
-    reverse_text = text[::-1]
-    if text == reverse_text:
-        return True
-    else:
-        return False
+    left, right = 0, len(text)-1
+
+    while left < right:
+
+        if text[left] != text[right]:
+            return False
+
+        left += 1
+        right -= 1
+
+    return True
+
+
+
+
+
+
+
+
+
+    
+
+#    reverse_text = text[::-1]
+#    if text == reverse_text:
+#        return True
+#    else:
+#        return False
 
 
 def run():
