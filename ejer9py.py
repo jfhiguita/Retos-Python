@@ -12,7 +12,7 @@ def run():
 
             guess_number = 0
             
-            while (guess_number < 1 or guess_number > 9):
+            while (guess_number not in range(1,10)):
                 track += 1
                 guess_number = int(input("what is the number? (SOLO numeros entre 1 y 9): "))
 

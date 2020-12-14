@@ -14,15 +14,6 @@ def _palindrome(text):
         right -= 1
 
     return True
-
-
-
-
-
-
-
-
-
     
 
 #    reverse_text = text[::-1]
@@ -41,9 +32,6 @@ def run():
         message = print('NOOOOOooo...it\'s not a palindrome!!!')
 
     return message
-
-
-
     
 
 if __name__ == '__main__':

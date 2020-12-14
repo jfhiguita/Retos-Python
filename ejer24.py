@@ -1,4 +1,4 @@
-
+import re
 
 def square(height, width):
 
@@ -13,18 +13,19 @@ def square(height, width):
         pass
 
 
-    
-
 def run():
 
-    size = input("what size do you want? (3x2,4x4,etc...) ").split('x')
-    height = int(size[0])
+    formato = True
 
-    if len(size) == 2:
-        
-        width = int(size[1])
-    else:
-        width = 1
+    while formato:
+
+        size = input("what size do you want? (3x2,4x4,etc...) ")
+        if re.search('^[0-9][x][0-9]', size):
+            formato = False
+            
+    size = size.split('x')
+    height = int(size[0])
+    width = int(size[1])
 
     while height > 0:
         

@@ -20,9 +20,10 @@ def _is_in(lista, number, low, high):
 def run():
 
     number = -1
-    lista = sorted(random.sample(range(0,30), 10))
+    number_range = range(0,31)
+    lista = sorted(random.sample(number_range, 10))
     
-    while (number < 0 or number > 30):
+    while (number not in number_range):
         number = int(input("Tell me a number between 0 and 30: "))
 
     is_in = _is_in(lista, number, low=0, high=len(lista)-1)

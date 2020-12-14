@@ -7,9 +7,10 @@ def _pass_generator(n):
     digits = [random.choice(string.digits) for _ in range(int(n*0.3))]
     special = [random.choice(string.punctuation) for _ in range(int(n*0.2))]
 
-    contrasena = letters + digits + special
+    contrasena = ''.join([letters,digits,special])
+    #contrasena = letters + digits + special
     random.shuffle(contrasena)
-    contrasena = "".join(contrasena)
+    #contrasena = "".join(contrasena)
                           
     return contrasena
 

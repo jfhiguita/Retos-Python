@@ -19,11 +19,14 @@ def run():
           track += 1
           user_num = input('Give me a number (4 digits): ')
 
-        for i in range(len(generate_number)):
-            if user_num[i] == generate_number[i]:
-                cows += 1
-            else:
-                bulls += 1
+        #for i in range(len(generate_number)):
+            #if user_num[i] == generate_number[i]:
+          
+        for idx, num in enumerate(generate_number):
+          if user_num[idx] == num:
+            cows += 1
+          else:
+            bulls += 1
 
         print(f'"Cows": {cows}', f'"Bulls": {bulls}', sep="\n")
 

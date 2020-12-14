@@ -1,11 +1,18 @@
 
 
 def _reverse(text):
-    lista = text.split()
-    reverse = lista[::-1]
-    result = ' '.join(reverse)
+    reverse = ''
+    text = text.split()
+    right = len(text)-1
+
+    #reverse = lista[::-1]
+    #result = ' '.join(reverse)
+
+    while right >= 0:
+        reverse += (text[right] + ' ')
+        right -= 1
     
-    return result
+    return reverse
 
 
 def run():
