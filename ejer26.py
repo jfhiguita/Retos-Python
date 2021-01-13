@@ -1,0 +1,42 @@
+
+def check_game(grid):
+
+    #rows
+    for x in range(3):
+        
+        row = set([grid[x][0], grid[x][1], grid[x][2]])
+        
+        if len(row) == 1 and grid[x][0] is not 0:
+
+            return grid[x][0]
+
+    #columns
+    for x in range(3):
+
+        column = set([grid[0][x], grid[1][x], grid[2][x]])
+
+        if len(column) == 1 and grid[0][x] is not 0:
+
+            return grid[0][x]
+
+    #diagonals
+    diag1 = set([grid[0][0], grid[1][1], grid[2][2]])
+    
+    diag2 = set([grid[0][2], grid[1][1], grid[2][0]])
+
+    if len(diag1) == 1 or len(diag2) == 1 and grid[1][1] is not 0:
+
+        return grid[1][1]
+
+    return 0
+
+    
+            
+
+
+
+if __name__ == '__main__':
+    
+    print(check_game([[2,2,0],
+                [2,1,0],
+                [2,1,1]]))
